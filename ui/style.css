@@ -1,0 +1,397 @@
+/* =======================================================
+   CLARA AI
+   Local Finance Intelligence
+   ======================================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    background:#0f0f10;
+
+    color:white;
+
+    font-family:"Segoe UI",Arial,sans-serif;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    min-height:100vh;
+}
+
+
+/* =======================================================
+   MAIN CONTAINER
+   ======================================================= */
+
+.container{
+
+    width:1100px;
+
+    height:90vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    background:#18181b;
+
+    border:1px solid #2b2b30;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    box-shadow:0px 10px 40px rgba(0,0,0,.45);
+}
+
+
+/* =======================================================
+   HEADER
+   ======================================================= */
+
+.header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:25px 35px;
+
+    border-bottom:1px solid #2b2b30;
+
+    background:#141416;
+}
+
+.header h1{
+
+    color:#ff4fa3;
+
+    font-size:34px;
+
+    letter-spacing:2px;
+}
+
+.header p{
+
+    color:#aaaaaa;
+
+    margin-top:6px;
+
+    font-size:15px;
+}
+
+.version{
+
+    background:#ff4fa3;
+
+    color:white;
+
+    padding:8px 18px;
+
+    border-radius:20px;
+
+    font-weight:bold;
+}
+
+
+/* =======================================================
+   UPLOAD PANEL
+   ======================================================= */
+
+.upload-panel{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:22px 30px;
+
+    border-bottom:1px solid #2b2b30;
+
+    background:#1d1d21;
+}
+
+.upload-left h3{
+
+    margin-bottom:6px;
+}
+
+.upload-left p{
+
+    color:#aaaaaa;
+
+    font-size:14px;
+}
+
+.upload-right{
+
+    display:flex;
+
+    gap:15px;
+
+    align-items:center;
+}
+
+.upload-right input{
+
+    color:white;
+}
+
+
+/* =======================================================
+   BUTTONS
+   ======================================================= */
+
+button{
+
+    background:#ff4fa3;
+
+    color:white;
+
+    border:none;
+
+    border-radius:10px;
+
+    padding:12px 26px;
+
+    cursor:pointer;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    transition:.25s;
+}
+
+button:hover{
+
+    background:#ff6db5;
+
+    transform:translateY(-2px);
+}
+
+button:active{
+
+    transform:scale(.97);
+}
+
+
+/* =======================================================
+   CHAT WINDOW
+   ======================================================= */
+
+#chatWindow{
+
+    flex:1;
+
+    overflow-y:auto;
+
+    padding:30px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+    background:#111113;
+}
+
+
+/* =======================================================
+   MESSAGES
+   ======================================================= */
+
+.message{
+
+    display:flex;
+
+    width:100%;
+}
+
+.message.assistant{
+
+    justify-content:flex-start;
+}
+
+.message.user{
+
+    justify-content:flex-end;
+}
+
+
+/* =======================================================
+   CHAT BUBBLES
+   ======================================================= */
+
+.bubble{
+
+    max-width:70%;
+
+    padding:18px;
+
+    border-radius:16px;
+
+    line-height:1.6;
+
+    animation:fadeIn .25s ease;
+}
+
+.assistant .bubble{
+
+    background:#202025;
+
+    border:1px solid #313138;
+}
+
+.user .bubble{
+
+    background:#ff4fa3;
+
+    color:white;
+}
+
+.bubble strong{
+
+    display:block;
+
+    margin-bottom:8px;
+
+    color:white;
+}
+
+
+/* =======================================================
+   INPUT PANEL
+   ======================================================= */
+
+.input-panel{
+
+    display:flex;
+
+    gap:18px;
+
+    padding:22px 28px;
+
+    border-top:1px solid #2b2b30;
+
+    background:#18181b;
+}
+
+.input-panel input{
+
+    flex:1;
+
+    background:#26262b;
+
+    border:1px solid #3a3a42;
+
+    color:white;
+
+    padding:15px 18px;
+
+    border-radius:12px;
+
+    outline:none;
+
+    font-size:15px;
+
+    transition:.2s;
+}
+
+.input-panel input:focus{
+
+    border-color:#ff4fa3;
+
+    box-shadow:0px 0px 10px rgba(255,79,163,.4);
+}
+
+.input-panel input::placeholder{
+
+    color:#777;
+}
+
+
+/* =======================================================
+   STATUS BAR
+   ======================================================= */
+
+.status-bar{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:15px 30px;
+
+    background:#141416;
+
+    border-top:1px solid #2b2b30;
+
+    color:#bbbbbb;
+
+    font-size:14px;
+}
+
+
+/* =======================================================
+   SCROLLBAR
+   ======================================================= */
+
+::-webkit-scrollbar{
+
+    width:8px;
+}
+
+::-webkit-scrollbar-track{
+
+    background:#18181b;
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#444;
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#666;
+}
+
+
+/* =======================================================
+   ANIMATION
+   ======================================================= */
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(12px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0px);
+
+    }
+}

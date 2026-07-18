@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Clara AI</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="header">
+
+        <div>
+
+            <h1>CLARA AI</h1>
+
+            <p>Local Finance Intelligence</p>
+
+        </div>
+
+        <div class="version">
+
+            v1.0
+        </div>
+
+    </header>
+
+
+    <!-- ================= UPLOAD ================= -->
+
+    <section class="upload-panel">
+
+        <div class="upload-left">
+
+            <h3>📄 Upload Invoice</h3>
+
+            <p>Select a PDF invoice to begin chatting.</p>
+
+        </div>
+
+        <div class="upload-right">
+
+            <input
+                id="pdfFile"
+                type="file"
+                accept=".pdf"
+            >
+
+            <button id="uploadButton">
+
+                Upload
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CHAT ================= -->
+
+    <section id="chatWindow">
+
+        <div class="message assistant">
+
+            <div class="bubble">
+
+                <strong>Clara</strong>
+
+                <p>
+
+                    👋 Welcome to Clara AI.
+
+                    <br><br>
+
+                    Upload an invoice and ask me anything.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= INPUT ================= -->
+
+    <section class="input-panel">
+
+        <input
+
+            id="question"
+
+            type="text"
+
+            placeholder="Ask Clara about your invoice..."
+
+        >
+
+        <button id="sendButton">
+
+            Send
+
+        </button>
+
+    </section>
+
+
+    <!-- ================= STATUS ================= -->
+
+    <footer class="status-bar">
+
+        <div>
+
+            🟢 Backend Ready
+
+        </div>
+
+        <div>
+
+            ⚪ No PDF Loaded
+
+        </div>
+
+        <div>
+
+            🟢 Ollama Connected
+
+        </div>
+
+    </footer>
+
+</div>
+
+<script src="app.js"></script>
+
+</body>
+
+</html>
